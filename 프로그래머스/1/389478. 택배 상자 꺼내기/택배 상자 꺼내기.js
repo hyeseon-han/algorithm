@@ -3,7 +3,6 @@ function solution(n, w, num) {
     let arr = [];
   for (let start = 1; start <= n; start += w) {
     const row = [];
-
     for (let j = 0; j < w; j++) {
       const value = start + j;
       if (value <= n) {
