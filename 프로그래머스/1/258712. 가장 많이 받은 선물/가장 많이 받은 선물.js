@@ -1,5 +1,4 @@
 function solution(friends, gifts) {
-    var answer = 0;
     const n = friends.length;
      // 1. 이름 → 인덱스 매핑
     const idxMap = {};
