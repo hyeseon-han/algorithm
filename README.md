@@ -17,6 +17,7 @@
 ## 알고리즘 패턴
 
 - [슬라이딩 윈도우](/docs/AlgorithmPatterns/슬라이딩%20윈도우.md)
+- [GCD, LCM](/docs/AlgorithmPatterns/GCD,%20LCM.md)
 
 - 해시
 - 스택/큐
@@ -29,13 +30,19 @@
 - 그래프
 
 <!---LeetCode Topics Start-->
+
 # LeetCode Topics
+
 ## Two Pointers
-|  |
-| ------- |
+
+|                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------- |
 | [1768-merge-strings-alternately](https://github.com/hyeseon-han/algorithm/tree/master/1768-merge-strings-alternately) |
+
 ## String
-|  |
-| ------- |
+
+|                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------- |
 | [1768-merge-strings-alternately](https://github.com/hyeseon-han/algorithm/tree/master/1768-merge-strings-alternately) |
+
 <!---LeetCode Topics End-->
