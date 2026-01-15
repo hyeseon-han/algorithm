@@ -2,7 +2,8 @@
 
 ## 개념
 
-큰 문제를 작은 문제들로 나누고 그 작은 문제의 정답을 저장해 두었다가 재사용하면서 전체 문제의 최적해를 구하는 방법이야.
+- 특정 알고리즘이 아니라 문제 해결 방식을 의미
+- 크게는 메모이제이션과 타뷸레이션 방식
 
 ## 사례
 
@@ -12,41 +13,19 @@
 
 - [등굣길](https://github.com/hyeseon-han/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/42898.%E2%80%85%EB%93%B1%EA%B5%A3%EA%B8%B8) (상향식)
 
+- [2 x n 타일링](https://github.com/hyeseon-han/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12900.%E2%80%852%E2%80%85x%E2%80%85n%E2%80%85%ED%83%80%EC%9D%BC%EB%A7%81) (피보나치)
+
+- [멀리뛰기](https://github.com/hyeseon-han/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12914.%E2%80%85%EB%A9%80%EB%A6%AC%E2%80%85%EB%9B%B0%EA%B8%B0)
+
 ## 구현 방식
 
-## 상향식(Bottom-Up)
+### 타뷸레이션(Tabulation)
 
-- 반복문 사용
-- DP 테이블을 처음부터 끝까지 채움
-- 스택 오버플로우 걱정 없음
+- 상향식(Bottom-Up)
+- 필요한 값들을 미리 계산해두는 것
 
-## 하향식(top-down)
+### 메모이제이션(Memoization)
 
-특징:
-
+- 하향식(top-down)
 - 재귀 사용
 - 이미 계산한 값은 저장해서 재사용
-
-dfs 로 풀었을때 케이스(시간복잡도 때문에 실패)
-
-```js
-function solution(triangle) {
-  let maxCount = 0;
-
-  function dfs(index, dept, sum) {
-    if (dept === triangle.length) {
-      maxCount = Math.max(sum, maxCount);
-      return;
-    }
-
-    const current = triangle[dept][index];
-
-    dfs(index, dept + 1, sum + current);
-    dfs(index + 1, dept + 1, sum + current);
-  }
-
-  dfs(0, 0, 0);
-
-  return maxCount;
-}
-```

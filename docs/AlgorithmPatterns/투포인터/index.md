@@ -4,6 +4,10 @@
 
 일차원 배열에 인덱스를 가리키는 두개의 포인터를 두고 값들을 비교하여 문제를 해결하는 알고리즘 패턴
 
+## 사례
+
+- [Move Zeroes](https://github.com/hyeseon-han/algorithm/tree/main/LeetCode/0283-move-zeroes)
+
 ## 예시
 
 예를들어 낮은 수부터 정렬 되어있는 숫자 배열이 주어졌을때, 배열 안에 첫번째로 두 숫자의 합이 0이 되는 값 2개를 배열에 담아 리턴하라고 했을때.
