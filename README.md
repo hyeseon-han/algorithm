@@ -14,12 +14,13 @@
 - [GCD, LCM](/docs/AlgorithmPatterns/GCD,%20LCM.md)
 - [소수구하기](/docs/AlgorithmPatterns/소수구하기/index.md)
 - [투포인터(Two Pointers)](/docs/AlgorithmPatterns/투포인터/index.md)
+- [greedy](/docs//AlgorithmPatterns/greedy.md)
 
 - 해시
 - 스택/큐
 - 정렬
 - [동적계획법(DP)](/docs/AlgorithmPatterns/dp.md)
-- 완전탐색
+- [완전탐색](/docs/AlgorithmPatterns/완전탐색.md)
   - 깊이 우선탐색(DFS)
   - 너비 우선탐색(BFS)
 - 이분탐색
