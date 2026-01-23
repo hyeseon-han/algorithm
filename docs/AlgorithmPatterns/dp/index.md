@@ -29,3 +29,12 @@
 - 하향식(top-down)
 - 재귀 사용
 - 이미 계산한 값은 저장해서 재사용
+
+![alt text](dp1.png)
+백트래킹을 이용한 피보나치 수열 구현은 중복된 연산이 너무 많다.
+
+따라서 이미 해결한 문제는 기록해주자 (=메모이제이션)
+![alt text](dp2.png)
+
+> 출처
+> https://lazyhysong.tistory.com/entry/JS-%EB%8F%99%EC%A0%81-%EA%B3%84%ED%9A%8D%EB%B2%95-Dynamic-Programming
