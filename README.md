@@ -10,7 +10,7 @@
 
 - [슬라이딩 윈도우](/docs/AlgorithmPatterns/슬라이딩%20윈도우.md)
 - [투포인터(Two Pointers)](/docs/AlgorithmPatterns/투포인터/index.md)
-- [greedy](/docs//AlgorithmPatterns/greedy.md)
+- greedy
 - 해시
 - 스택/큐
 - 정렬
@@ -22,7 +22,7 @@
 
 ## 방식
 
-- [동적계획법(DP)](/docs/AlgorithmPatterns/dp/index.md)
+- 동적계획법(DP)
 - [GCD, LCM](/docs/AlgorithmPatterns/GCD,%20LCM.md)
 - [소수구하기](/docs/AlgorithmPatterns/소수구하기/index.md)
 - [참고](/docs/ref.md)
@@ -129,11 +129,20 @@ arr.sort((a, b) => a - b); // [1,2,3,4]
 
 ### 개념
 
-큰 문제를 작은 문제로 쪼개서 풀고, 그 결과를 저장해두는 방법<br/>
+- 큰 문제를 작은 문제로 쪼개서 풀고, 그 결과를 저장해두는 방법<br/>
 핵심은 **중복 계산을 줄인다** (메모이제이션, 테이블)
+- 특정 알고리즘이 아니라 문제 해결 방식을 의미
+- 크게는 메모이제이션과 타뷸레이션 방식
+
+## 사례
+
+- [프로그래머스- 땅따먹기](https://github.com/hyeseon-han/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12913.%E2%80%85%EB%95%85%EB%94%B0%EB%A8%B9%EA%B8%B0)
+- [정수 삼각형](https://github.com/hyeseon-han/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/43105.%E2%80%85%EC%A0%95%EC%88%98%E2%80%85%EC%82%BC%EA%B0%81%ED%98%95)
+- [등굣길](https://github.com/hyeseon-han/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/42898.%E2%80%85%EB%93%B1%EA%B5%A3%EA%B8%B8) (상향식)
+- [2 x n 타일링](https://github.com/hyeseon-han/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12900.%E2%80%852%E2%80%85x%E2%80%85n%E2%80%85%ED%83%80%EC%9D%BC%EB%A7%81) (피보나치)
+- [멀리뛰기](https://github.com/hyeseon-han/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12914.%E2%80%85%EB%A9%80%EB%A6%AC%E2%80%85%EB%9B%B0%EA%B8%B0)
 
 ### 자주 쓰는 정렬 알고리즘
-
 피보나치 수열
 
 - 재귀 => 비효율
@@ -157,16 +166,55 @@ arr.sort((a, b) => a - b); // [1,2,3,4]
   }
   ```
 
+### 구현 방식
+
+#### 타뷸레이션(Tabulation)
+
+- 상향식(Bottom-Up)
+- 필요한 값들을 미리 계산해두는 것
+
+#### 메모이제이션(Memoization)
+
+- 하향식(top-down)
+- 재귀 사용
+- 이미 계산한 값은 저장해서 재사용
+
+![alt text](dp1.png)
+백트래킹을 이용한 피보나치 수열 구현은 중복된 연산이 너무 많다.
+
+따라서 이미 해결한 문제는 기록해주자 (=메모이제이션)
+![alt text](dp2.png)
+
+> 출처
+> https://lazyhysong.tistory.com/entry/JS-%EB%8F%99%EC%A0%81-%EA%B3%84%ED%9A%8D%EB%B2%95-Dynamic-Programming
+
+
 ## 7. 탐욕법(Greedy)
 
 ### 개념
 
-매 순간 "지금 가장 좋아 보이는 선택"을 해서 최적해를 구하는 방법
+- 매 순간 "지금 가장 좋아 보이는 선택"을 해서 최적해를 구하는 방법
+- 현재 상황에서 가장 좋아 보이는 것만을 선택하는 알고리즘
+- 기준에 따라 좋은 것을 선택하는 알고리즘
 
 ### 자주 출제 되는 문제
 
 - 거스름돈 문제 (큰 동전부터 차례대로 줌)
 - 프로그래머스 “체육복” 문제 (앞뒤 학생에게만 빌려줌)
+
+### 사례
+
+- [increasing-triplet-subsequence](https://github.com/hyeseon-han/algorithm/tree/main/LeetCode/0334-increasing-triplet-subsequence)
+- [단속카메라](https://github.com/hyeseon-han/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/42884.%E2%80%85%EB%8B%A8%EC%86%8D%EC%B9%B4%EB%A9%94%EB%9D%BC)
+
+// TODO
+
+- [체육복]()
+- [조이스틱]()
+- [큰 수 만들기]()
+- [구명보트]()
+- [섬 연결하기]()
+
 
 ## 8. 완전탐색(Brute Force)
 
