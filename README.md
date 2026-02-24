@@ -14,7 +14,7 @@
 - 해시
 - 스택/큐
 - 정렬
-- [완전탐색](/docs/AlgorithmPatterns/완전탐색.md)
+- 완전탐색
   - 깊이 우선탐색(DFS)
   - 너비 우선탐색(BFS)
 - 이분탐색
@@ -186,6 +186,12 @@ arr.sort((a, b) => a - b); // [1,2,3,4]
 - 미로 찾기 → BFS
 - 트리 순회 → DFS
 
+### 사례
+
+- [게임 맵 최단거리](https://github.com/hyeseon-han/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/1844.%E2%80%85%EA%B2%8C%EC%9E%84%E2%80%85%EB%A7%B5%E2%80%85%EC%B5%9C%EB%8B%A8%EA%B1%B0%EB%A6%AC)
+- [단어 변환](https://github.com/hyeseon-han/algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/3/43163.%E2%80%85%EB%8B%A8%EC%96%B4%E2%80%85%EB%B3%80%ED%99%98)
+
+
 ```js
 // DFS 예시 (재귀)
 function dfs(node, visited, graph) {
@@ -212,6 +218,19 @@ function bfs(start, graph) {
   }
 }
 ```
+
+#### [DFS]
+
+DFS와 다르게 복구 할 필요 없음
+DFS 에서는 한 경로를 끝까지 파고들기 때문에 나중에 더 짧은 경로가 나올 수도 있어서 복구를 해야하지만 BFS인 경우에는 복구 할 필요 없음.
+
+```js
+visited[x][y] = true;
+// ...
+visited[x][y] = false; // 백트래킹 시 복구
+```
+
+왜냐하면 가까운 거리 → 먼 거리 순으로 가기 때문에 한번 방문 했으면 최단거리 계산 끝났다고 판단
 
 ## 10. 이분탐색(Binary Search)
 
