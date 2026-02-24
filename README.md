@@ -22,7 +22,7 @@
 
 ## 방식
 
-- [동적계획법(DP)](/docs/AlgorithmPatterns/dp.md)
+- [동적계획법(DP)](/docs/AlgorithmPatterns/dp/index.md)
 - [GCD, LCM](/docs/AlgorithmPatterns/GCD,%20LCM.md)
 - [소수구하기](/docs/AlgorithmPatterns/소수구하기/index.md)
 - [참고](/docs/ref.md)
