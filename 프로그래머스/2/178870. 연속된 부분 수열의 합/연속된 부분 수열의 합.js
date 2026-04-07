@@ -1,39 +1,24 @@
 function solution(sequence, k) {
+    let left = 0;
     let sum = 0;
-    let firstIndex = 0;
-    let i = 0;
     let answer = [0, sequence.length - 1]; 
     
-    while(i < sequence.length){
-        const ele = sequence[i];
-        const vitualSum = sum + ele;
+    for(let right = 0; right < sequence.length; right++){
+        sum += sequence[right]; 
         
-        if(vitualSum < k){
-            sum += ele;
-            i++;
-            continue;
+        while(sum > k){
+            sum -= sequence[left];
+            left++;
         }
         
-        if(vitualSum > k){
-            if(i === firstIndex){
-                i ++;
-                firstIndex ++;
-            }else{
-                sum -= sequence[firstIndex];
-                firstIndex ++;
+        if(sum === k){
+            if((right-left) < (answer[1]-answer[0])){
+                answer = [left, right];
             }
-            continue;
-        }
-        
-        if(vitualSum === k){
-            if((i - firstIndex) < (answer[1] - answer[0])){
-                answer = [firstIndex, i];
-            }
-            
-            sum -= sequence[firstIndex];
-            firstIndex ++;
         }
     }
+    
+    
     
     return answer;
 }
